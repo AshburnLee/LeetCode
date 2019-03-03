@@ -5,19 +5,18 @@ using namespace std;
 class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
-        vector<int> res(digits);
-        for (int i=res.size()-1; i>=0;i--){
-            if(res[i] == 9)
-                res[i] = 0;
+        for (int i=digits.size()-1; i>=0;i--){
+            if(digits[i] == 9)
+                digits[i] = 0;
             else{  // one digit is not a '9'
-                res[i]++;
-                return res;
+                digits[i]++;
+                return digits;
             }
         }
         // when all digit are '9'
-        res[0] = 1;
-        res.push_back(0);
-        return res;
+        digits[0] = 1;
+        digits.push_back(0);
+        return digits;
     }
 };
 
