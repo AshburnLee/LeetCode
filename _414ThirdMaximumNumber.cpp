@@ -30,8 +30,8 @@ public:
     }
     bool static myfunction (int i,int j) { return (i>j); }
 
-    // works fine in local machine, 
-    // yet, can not be compiled by Leetcode's compiler
+    // time: O(N)
+    // space : O(N)
     int thirdMax(vector<int>& nums){
         map<int,int> freq;
         for (auto _: nums)
@@ -54,6 +54,7 @@ public:
                     return itr->first;
             }
         }
+        return 0;
     }
 };
 
