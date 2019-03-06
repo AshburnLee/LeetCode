@@ -6,7 +6,9 @@ using namespace std;
 
 class Solution {
 public:
-    vector<int> findDisappearedNumbers(vector<int>& nums) {
+    // time: O(nlogn) set constructor
+    // space: O(n)
+    vector<int> findDisappearedNumbers2(vector<int>& nums) {
         vector<int> res;
         // sort and return size
         int n = nums.size();
