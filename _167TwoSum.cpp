@@ -22,12 +22,12 @@ public:
         return store;
     }
 
+    // mine
     // use the advantage of "sorted"
     // binary seach
-    // ????????????????????????????
     // O(n*logn)
     vector<int> twoSum3(vector<int>& numbers, int target){
-        vector<int> store(2);
+        vector<int> store;
         for (int i=0; i<numbers.size(); i++){
             // binary search
             int l = i+1;  //def index
@@ -35,8 +35,10 @@ public:
             while (l<=r){
                 int mid = l+(r-l)/2;
                 if(numbers[mid] == target-numbers[i]){
-                    store.push_back(mid);
-                    store.push_back(i);
+                    
+                    store.push_back(i+1);
+                    store.push_back(mid+1);
+                    break;
                 }
                 if(target-numbers[i] > numbers[mid])
                     l = mid + 1;
@@ -44,6 +46,7 @@ public:
                     r = mid - 1;
             }
         }
+        return store;
     }
 
     // 对撞指针 
@@ -71,7 +74,7 @@ int main(int argc, char const *argv[])
     vector<int> test = {1,3,6,7,10};
     vector<int> res(2);
     Solution sol;
-    res = sol.twoSum(test, 13);
+    res = sol.twoSum3(test, 16);
     for (int _ : res)
         cout<<_<<" ";
     cout<<endl;
