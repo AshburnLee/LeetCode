@@ -6,6 +6,17 @@ using namespace std;
 
 class Solution {
 public:
+    // mine
+    void moveZeroesMine(vector<int>& nums){
+        int k=-1; // [0,...,k) non-zero
+        for (int i=0; i<nums.size(); i++){
+            if (nums[i] != 0)
+                swap(nums[i], nums[++k]);
+            else
+                continue;
+        }
+    }
+
     void moveZeroes(vector<int>& nums) {
 
         vector<int> nonZeros;  //def
@@ -52,9 +63,9 @@ public:
 
 int main(int argc, char const *argv[])
 {
-    vector<int> test = {0,1,0,3,12};
-    Solution sol;
-    sol.moveZeroes3(test);
+    int arr[] = {0,1,0,3,12};
+    vector<int> test(arr, arr+sizeof(arr)/sizeof(int));
+    Solution().moveZeroesMine(test);
     for (int i=0;i<test.size();i++)
         cout<<test[i]<<" ";
     cout<<endl;
