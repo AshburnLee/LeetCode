@@ -28,7 +28,7 @@ public:
             jinwei = sum/2;
             value = sum%2;
 //            res.insert(res.begin(), int2char(value));
-            res = int2char(value) + res;
+            res = int2char(value) + res;  // faster than the above one!!!!!!!!!!!!
 
         }
         if (jinwei == 1)
