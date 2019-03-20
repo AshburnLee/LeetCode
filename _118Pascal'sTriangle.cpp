@@ -39,7 +39,17 @@ public:
 int main(int argc, char const *argv[])
 {
     vector<vector<int>> res;
-    res = Solution().generate2(3);
+    int rows = 6;
+    res = Solution().generate(rows);
+
+
+    for (auto _: res) {
+        for (auto __:_)
+            cout << __ << " ";
+        cout << endl;
+    }
+    cout<<endl;
+
 
     return 0;
 }
