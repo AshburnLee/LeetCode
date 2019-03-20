@@ -24,6 +24,7 @@ public:
 
     //time: O(n)
     //space: O(1)
+    // brilliant
     void rotate2(vector<int>& nums, int k) {
 
         k %= nums.size();
@@ -32,7 +33,7 @@ public:
         reverse(nums, k, nums.size() - 1);
     }
 
-private:
+//private:
     void reverse(vector<int>& nums, int start, int end){
         for(int i = start, j = end; i < j; i ++, j --)
             swap(nums[i], nums[j]);
@@ -41,6 +42,12 @@ private:
 
 int main(int argc, char** argv){
     vector<int> test = {1,2,3,4,5,6,7};
+
+    Solution().reverse(test, 0, test.size()-1);
+
+    for(auto _: test)
+        cout<<_<<" ";
+    cout<<endl;
 
     Solution().rotate(test, 8);
 
