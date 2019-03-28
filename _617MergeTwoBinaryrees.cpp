@@ -13,8 +13,8 @@ struct TreeNode{
 
 class Solution{
 public:
-    // time: O(2^N). N is the depth of the deeper tree
-    // space: O(N). N is the depth of the deeper tree
+    // time: O(N). N is the number of nodes in the deeper tree
+    // space: O(M). M is the depth of the deeper tree
     /* mergeTrees: pass two roots, return the merged root */
     TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2){
         if (!t1 && !t2)
