@@ -13,15 +13,28 @@ public:
     void rotate(vector<vector<int>>& matrix) {
         int n = matrix[0].size();
         for (int j=n, k=0; j>0, k<n/2; j-=2, k++){
-            func(matrix, j, k);
+            func2(matrix, j, k);
         }
     }
 private:
+    // 3*3=9 assign operations
     void func(vector<vector<int>>& matrix, int n, int k){
         for (int i=0;i<n-1;i++){
             swap(matrix[k][i+k], matrix[n-1-i+k][k]);
             swap(matrix[n-1-i+k][k], matrix[n-1+k][n-1-i+k]);
             swap(matrix[n-1+k][n-1-i+k], matrix[i+k][n-1+k]);
+        }
+    }
+
+    // 5 assign operations
+    void func2(vector<vector<int>>& matrix, int n, int k){
+        int tmp;
+        for (int i=0;i<n-1;i++){
+            tmp = matrix[k][i+k];
+            matrix[k][i+k] = matrix[n-1-i+k][k];
+            matrix[n-1-i+k][k] = matrix[n-1+k][n-1-i+k];
+            matrix[n-1+k][n-1-i+k] = matrix[i+k][n-1+k];
+            matrix[i+k][n-1+k] = tmp;
         }
     }
 };
