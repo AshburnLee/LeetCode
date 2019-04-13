@@ -25,12 +25,13 @@ public:
         int rs = sum-nums[0];
 
         for (int i=0; i<nums.size(); i++){
-            if (ls==rs)
-                return i;
+
             if (i>0){
                 ls+=nums[i-1];
                 rs-=nums[i];
             }
+            if (ls==rs)
+                return i;
         }
         return -1;
     }
