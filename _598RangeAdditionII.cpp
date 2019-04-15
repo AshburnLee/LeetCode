@@ -11,7 +11,8 @@ private:
 public:
     // time limit exceeded,
     // constructing & maintaining the matrix M is time consuming, which is redundant
-    int maxCount(int m, int n, vector<vector<int>>& ops) {
+    // bear in mind this is a MATH problem
+    int maxCount2(int m, int n, vector<vector<int>>& ops) {
         if (ops.empty())
             return m*n;
 
@@ -60,22 +61,27 @@ public:
         return count;
     }
 
-//    void printMat(){
-//        for (int i=0; i<mat.size(); i++){
-//            for (int j=0;j<mat[0].size(); j++){
-//                cout<<mat[i][j]<<" ";
-//            }
-//            cout<<endl;
-//        }
-//    }
+    // time: O(ops.size())  98.63%
+    // space: O(1)          100%
+    int maxCount(int m, int n, vector<vector<int>>& ops) {
+        int minI = max(m, n);
+        int minJ = max(m, n);
+        for (int i=0; i<ops.size(); i++){
+            minI = min(minI, ops[i][0]);
+            minJ = min(minJ, ops[i][1]);
+        }
+        return minI*minJ;
+    }
+
 };
 
 int main(int argc, char** argv){
 
     Solution sol;
-    vector<vector<int>> ops = {{19999,19999}};
+    vector<vector<int>> ops = {{2,2},{3,2}};
 
-    cout<<sol.maxCount(39999,39999, ops)<<endl;
+    cout<<sol.maxCount(3,3, ops)<<endl;
 //    sol.printMat();
+
     return 0;
 }
