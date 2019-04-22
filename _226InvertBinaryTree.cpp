@@ -11,6 +11,8 @@ struct TreeNode {
 
 class Solution {
 public:
+    // time: O(#nodes)   100.00%
+    // space: O(#nodes)   94.17%
     TreeNode* invertTree(TreeNode* root) {
         if (root == NULL)
            return NULL;
@@ -21,3 +23,8 @@ public:
         return root;
     }
 };
+
+int main(int argc, char** argv){
+
+    return 0;
+}
