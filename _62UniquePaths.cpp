@@ -19,16 +19,6 @@ public:
         }
         return (int)res;
     }
-
-public:
-int uniquePaths2(int m, int n) {
-        int M = n + m - 2;
-        int N = m - 1;
-        long res = 1;
-        for (int i = 1; i <= N; i++)
-            res = res * (M + i - N) / i;
-        return (int)res;
-    }
 };
 
 
@@ -37,7 +27,6 @@ int main(int argc, char** argv){
     int m = 10;
     int n = 23;
     cout<<Solution().uniquePaths(m, n)<<endl;
-    cout<<Solution().uniquePaths2(m, n)<<endl;
 
     return 0;
 }
