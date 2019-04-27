@@ -28,6 +28,18 @@ public:
         }
         throw invalid_argument("No solution found!");
     }
+
+    // time: O(N)  100.00%
+    // space: O(1)  22.49%
+    ListNode* middleNode2(ListNode* head){
+        ListNode* speed1 = head;
+        ListNode* speed2 = head;
+        while(speed2 && speed2->next){
+            speed1 = speed1->next;
+            speed2 = speed2->next->next;
+        }
+        return speed1;
+    }
 };
 
 int main(int argc, char** argv){
@@ -38,7 +50,7 @@ int main(int argc, char** argv){
     tmp = ll.createListList(arr, 6);
     ll.printList(tmp);
 
-    ListNode* res = Solution().middleNode(tmp);
+    ListNode* res = Solution().middleNode2(tmp);
     cout<<res->val<<endl;
 
     return 0;
