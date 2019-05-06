@@ -5,11 +5,11 @@
 #include <vector>
 using namespace std;
 /*
+ * compare with ../_78Subsetes.cpp
  * input: n=3, k=2
  * output: [1, 2]
            [1, 3]
            [2, 3]
- *
  * */
 class Solution {
 private:
@@ -21,6 +21,7 @@ private:
         }
 
         for (int i=start; i<=n; i++){
+            cout<<i<<endl;
             c.push_back(i);
             getCombination(n,k,i+1,c);
             c.pop_back();
