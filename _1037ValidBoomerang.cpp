@@ -8,6 +8,8 @@ using namespace std;
 
 class Solution{
 public:
+    // time: O(1)  100.00%
+    // space O(1)   100.00%
     bool isBoomerang(vector<vector<int>>& points) {
         return (!onLines(points)) && (differentPoint(points));
     }
@@ -19,7 +21,7 @@ private:
     }
 
     /* all points are different */
-    bool differentPoint(vector<vector<int>>& points){
+    bool differentPoint(vector<vector<int>>& points){   
         return (points[0]!= points[1] && points[1]!= points[2] && points[0]!= points[2]);
     }
 };
