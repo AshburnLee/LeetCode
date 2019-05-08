@@ -20,12 +20,22 @@ public:
     }
 };
 
+// time: O(1)  100.00%
+// space : O(1)   35.74%
+class Solution2{
+public:
+    bool isPowerOfTwo(int n){
+        if (n==0) return false;
+        return (n>0 && (n & (n-1)) == 0);
+    }
+};
+
 int main(){
-    cout<<Solution().isPowerOfTwo(1)<<endl;
-    cout<<Solution().isPowerOfTwo(2)<<endl;
-    cout<<Solution().isPowerOfTwo(3)<<endl;
-    cout<<Solution().isPowerOfTwo(4)<<endl;
-    cout<<Solution().isPowerOfTwo(16)<<endl;
-    cout<<Solution().isPowerOfTwo(218)<<endl;
+    cout<<Solution2().isPowerOfTwo(1)<<endl;
+    cout<<Solution2().isPowerOfTwo(2)<<endl;
+    cout<<Solution2().isPowerOfTwo(3)<<endl;
+    cout<<Solution2().isPowerOfTwo(4)<<endl;
+    cout<<Solution2().isPowerOfTwo(16)<<endl;
+    cout<<Solution2().isPowerOfTwo(218)<<endl;
     return 0;
 }
