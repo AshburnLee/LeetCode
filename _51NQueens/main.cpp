@@ -17,10 +17,5 @@ int main(int argc, char** argv){
         cout<<endl;
     }
 
-    vector<string> queen(4, string(4, '.'));
-    for (auto& i:queen  )
-        cout<<i<<" ";
-    cout<<endl;
-
     return 0;
 }

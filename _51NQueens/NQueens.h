@@ -5,7 +5,6 @@
 #ifndef HQUEENS_H
 #define HQUEENS_H
 
-
 #include <iostream>
 #include <vector>
 
