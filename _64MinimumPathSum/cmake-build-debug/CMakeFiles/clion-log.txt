@@ -1,4 +1,0 @@
-/home/junhui/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /media/junhui/DATA/Bobo_imooc/BOBO_lecture_2/_64MinimumPathSum
--- Configuring done
--- Generating done
--- Build files have been written to: /media/junhui/DATA/Bobo_imooc/BOBO_lecture_2/_64MinimumPathSum/cmake-build-debug

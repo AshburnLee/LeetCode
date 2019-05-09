@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/_64MinimumPathSum.dir/main.cpp.o  -o _64MinimumPathSum 
