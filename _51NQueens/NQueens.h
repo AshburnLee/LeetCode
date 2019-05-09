@@ -64,61 +64,6 @@ private:
     }
 };
 
-//void putQueen(int n, int index, vector<int>& row){
-//
-//    if (index == n){
-//        res.push_back(generateBoard(n, row));
-//        return;
-//    }
-//
-//    for (int i=0; i<n;i++){
-//        if (!col[i] && !dia1[index+i] && !dia2[index-i+n-1]){
-//            printRow(row);
-//            row.push_back(i);
-//
-//            col[i] = true;
-//            dia1[index+i] = true;
-//            dia2[index-i +n-1] = true;
-//            putQueen(n, index+1,row);
-//
-//            col[i] = false;
-//            dia1[index+i] = false;
-//            dia2[index-i+n-1] = false;
-//            row.pop_back();
-//
-//        }
-//    }
-//    return;
-//}
-//
-//vector<vector<string>> solveNQueens(int n){
-//    // initialization
-//    for (int i=0; i<n; i++)
-//        col.push_back(false);
-//
-//    for (int i=0; i<2*n-1; i++){
-//        dia1.push_back(false);
-//        dia2.push_back(false);
-//    }
-//
-//    // entry
-//    vector<int> row;
-//    putQueen(n, 0, row);
-//
-//    return res;
-//}
-//
-//vector<string> generateBoard(int n, vector<int>& row){
-//    vector<string> board(n, string(n, '.'));
-//    for (int i=0;i<n; i++)
-//        board[i][row[i]] = 'Q';
-//    return board;
-//}
-//void printRow(vector<int>& row){
-//    for (auto& i: row)
-//        cout<<i<<" ";
-//    cout<<endl;
-//}
 
 #endif
 
