@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/_279PerfectSquares.dir/main.cpp.o  -o _279PerfectSquares 
