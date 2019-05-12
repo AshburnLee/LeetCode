@@ -30,8 +30,8 @@ private:
 public:
     ListNode* reverseBetween(ListNode* head, int m, int n) {
         assert(m<=n);
-        if (!head) return head;
-        if (m==n) return head;
+//        if (!head) return head;
+//        if (m==n) return head;
 
         ListNode* dhead = new ListNode(-1);
         dhead->next = head;
