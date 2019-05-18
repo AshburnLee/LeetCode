@@ -11,10 +11,13 @@
 using namespace std;
 class Solution{
 public:
+    /// time: O(M*N)
+    /// space: O(N)
     vector<int> findAnagrams(string s, string p) {
         vector<int> res;
         int n = s.length();
         int m = p.length();
+
         for (int i=0; i<=n-m; i++){
             if (same(i, m, s, p)){
                 res.push_back(i);
@@ -28,7 +31,7 @@ private:
         unordered_map<char, int> mp;
 
         // add s[i],..,s[m-1] to map
-        for (int j=i;j<m;j++){
+        for (int j=i;j<i+m;j++){
             mp[s[j]]++;
         }
 
@@ -39,7 +42,7 @@ private:
             else{
                 mp[p[k]]--;
                 if (mp[p[k]]==0)
-                    mp.erase(mp[p[k]]);
+                    mp.erase(p[k]);
             }
         }
         return true;
