@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Solution.h"
+#include "Solution2.h"
 using namespace std;
 
 int main() {
@@ -11,6 +12,11 @@ int main() {
 
     vector<int> nums3 = {1,4,1,3,1,-14,1,-13};
     cout<<Solution().findLHS(nums3)<<endl;
+
+
+    cout<<Solution2().findLHS(nums)<<endl;
+    cout<<Solution2().findLHS(nums2)<<endl;
+    cout<<Solution2().findLHS(nums3)<<endl;
 
     return 0;
 }
