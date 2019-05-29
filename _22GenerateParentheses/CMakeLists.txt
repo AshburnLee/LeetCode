@@ -3,4 +3,4 @@ project(_22GenerateParentheses)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(_22GenerateParentheses main.cpp Solution.h)
+add_executable(_22GenerateParentheses main.cpp Solution.h Solution2.h)
