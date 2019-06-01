@@ -9,7 +9,7 @@ using namespace std;
 
 /* O(M+N) and constant space solutions */
 /// time: O(N*M)   89.45%
-/// space: O(1)   6.62%
+/// space: O(M+N)   6.62%
 class Solution{
 public:
     void setZeroes(vector<vector<int>>& matrix) {
