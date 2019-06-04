@@ -12,6 +12,8 @@ int main(int argc, char** argv){
 			                   {4,7,12,14,19,30}};
 	cout<<Solution().searchMatrix(mat, 22)<<endl;
 	cout<<Solution().searchMatrix(mat, 11)<<endl;
+	cout<<Solution2().searchMatrix(mat, 22)<<endl;
+	cout<<Solution2().searchMatrix(mat, 11)<<endl;
 
 	cout<<endl;
 	vector<vector<int>> mat2 = {{1,4, 7 },
@@ -21,16 +23,22 @@ int main(int argc, char** argv){
 							    {5,10,20}};
 	cout<<Solution().searchMatrix(mat2, 2)<<endl;
 	cout<<Solution().searchMatrix(mat2, 6)<<endl;
+	cout<<Solution2().searchMatrix(mat2, 2)<<endl;
+	cout<<Solution2().searchMatrix(mat2, 6)<<endl;
 
 	cout<<endl;
 	vector<vector<int>> mat3 = {{1},{3},{5}};
 	cout<<Solution().searchMatrix(mat3, 0)<<endl;
 	cout<<Solution().searchMatrix(mat3, 3)<<endl;
+	cout<<Solution2().searchMatrix(mat3, 0)<<endl;
+	cout<<Solution2().searchMatrix(mat3, 3)<<endl;
 	
 	cout<<endl;
 	vector<vector<int>> mat4 = {{1,3,5}};
 	cout<<Solution().searchMatrix(mat4, 0)<<endl;
 	cout<<Solution().searchMatrix(mat4, 3)<<endl;
+	cout<<Solution2().searchMatrix(mat4, 0)<<endl;
+	cout<<Solution2().searchMatrix(mat4, 3)<<endl;
 
 	return 0;
 }
