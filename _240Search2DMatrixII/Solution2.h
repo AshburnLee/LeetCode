@@ -5,7 +5,9 @@
 #include <iostream>
 #include <vector>
 
-class Solution {
+/// time: O(M+N)
+/// space: O(1)
+class Solution2 {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
         int row = matrix.size();
@@ -17,17 +19,13 @@ public:
         if (target < matrix[0][0] || target > matrix[row-1][col-1])
             return false;
         
-        int i = 0, j = col - 1;
-        while (i < row && j >=0)
+		int r = row-1;
+		int c = 0;
+        while(r >= 0 && c < col )
         {
-            if (target == matrix[i][j])
-                return true;
-            //if target > matrix[i][j],then target must not appear in row-i
-            else if (target > matrix[i][j])
-                ++i;
-            //if target < matrix[i][j],then target must not appear in column-j
-            else
-                --j;
+            if (target == matrix[r][c]) return true;
+            else if (target > matrix[r][c]) c++;
+            else r--;
         }
         
         return false;
