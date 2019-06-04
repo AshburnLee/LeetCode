@@ -5,10 +5,11 @@
 #include <vector>
 
 using namespace std;
-
+///time: O(|M-N|*(M+M+N))
+/// space: O(|M-N|*M)
 class Solution {
 private:
-	// col>=row
+	// get a diagonal when col>=row
 	vector<int> getDiag1(int d, vector<vector<int>>& matrix){
 		int row = matrix.size();
 
@@ -19,7 +20,7 @@ private:
 		return diag;
 	}
 
-	// row > col
+	//get a diagonal when row > col
 	vector<int> getDiag2(int d, vector<vector<int>>& matrix){
 		int col = matrix[0].size();
 
@@ -29,8 +30,6 @@ private:
 
 		return diag;
 	}
-
-
 
 	/// search target 
 	bool search(vector<vector<int>>& matrix, int target, int pr, int pc){
