@@ -6,4 +6,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(_412FizzBuzz
 				main.cpp
-				Solution.h)
+				Solution.h
+				Solution2.h)
