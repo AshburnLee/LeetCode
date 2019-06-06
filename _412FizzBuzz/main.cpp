@@ -1,15 +1,14 @@
 #include <iostream>
 #include <vector>
-#include <sstream>
 #include "Solution.h"
-//using namespace std;
+#include "Solution2.h"
 
-int main(int argc, char** argv){
-	vector<string> res = Solution().fizzBuzz(15);
+using namespace std;
 
+int main(){
+	vector<string> res = Solution2().fizzBuzz(15);
 	for (auto i: res)
 		cout<<i<<" ";
-
 	cout<<endl;
 	return 0;
 }
