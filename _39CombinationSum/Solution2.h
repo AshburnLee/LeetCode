@@ -28,7 +28,7 @@ private:
 
         for (int i=index; i<candidate.size() && sum<0; i++){
             tmp.push_back(candidate[i]);
-            func(candidate, res, tmp, sum+candidate[i], index+i);
+            func(candidate, res, tmp, sum+candidate[i], i);
             tmp.pop_back();
         }
     }

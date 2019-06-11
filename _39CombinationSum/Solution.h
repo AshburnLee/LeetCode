@@ -27,7 +27,7 @@ private:
 
         for (int i=index; i<candidate.size() && vecSum(tmp)<target; i++){
             tmp.push_back(candidate[i]);
-            func(candidate, res, tmp, target, index+i);
+            func(candidate, res, tmp, target, i);
             tmp.pop_back();
         }
     }   
