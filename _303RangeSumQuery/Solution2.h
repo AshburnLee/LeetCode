@@ -11,19 +11,19 @@ using namespace std;
 /// space: O(nums.size())
 class NumArray2{
 	private:
-		vector<int> sum;
+		vector<int> memo;
 	public:
 		NumArray2(vector<int>& nums){
-			sum = vector<int>(nums.size(), 0);
+			memo = vector<int>(nums.size()+1, 0);
 
-			sum[0] = nums[0];
-			for (int i=1; i<nums.size(); i++)
-				sum[i] = nums[i] + sum[i-1];
+			for (int i=0; i<nums.size(); i++)
+				memo[i+1] = memo[i] + nums[i];
 		}
 
 		int sumRange(int i, int j){
-			return i==0 ? sum[j] : sum[j]-sum[i-1];
+			return memo[j+1] - memo[i];
 		}
+
 };
 
 #endif 
