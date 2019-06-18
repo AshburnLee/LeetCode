@@ -3,20 +3,12 @@
 
 #include <iostream>
 #include <vector>
-
+#include "TreeNode.h"
 using namespace std;
 
-struct TreeNode{
-	int val;
-	TreeNode* left;
-	TreeNode* right;
-	TreeNode(int x): val(x), left(NULL), right(NULL){}
-
-};
-
-/// the application of inorder traversal
-/// time: O(N)  N: #nodes
-/// space: O(N)  
+/// Inorder traversal, and serialize all the nodes
+/// time: O(N)
+/// space: O(N)
 class Solution{
 private:
 	vector<int> nodes;

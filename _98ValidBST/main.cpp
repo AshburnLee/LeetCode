@@ -1,4 +1,5 @@
 #include "Solution.h"
+#include "Solution2.h"
 
 void printInorder(TreeNode* root){
     if (!root) return;
@@ -27,7 +28,7 @@ int main(int argc, char** argv){
 	cout<<endl;
 
 	cout<<Solution().isValidBST(n1)<<endl;
-	
+	cout<<Solution2().isValidBST(n1)<<endl;
 
 	return 0;
 }
