@@ -5,8 +5,8 @@
 #include "../util/LinkedList.h"
 #include <vector>
 
-/// time: 
-/// space:  
+/// time: O(N)
+/// space:  O(logN)
 using namespace std;
 class Solution{
 private:
