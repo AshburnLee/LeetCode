@@ -7,7 +7,7 @@
 
 using namespace std;
 
-/// time: O(NlogN)
+/// time: O(N)  
 /// space: O(1)
 class Solution{
 public:
@@ -15,12 +15,12 @@ public:
 		for (int i=0; i<nums.size()-1; i++){
 			if (nums[i]>nums[i+1]){
 				int tmp = nums[i];
-
-				nums[i]=nums[i+1];
-				if (is_sorted(nums.begin(), nums.end())) return true;
-
+				
 				nums[i]=tmp;
 				nums[i+1] = tmp;
+				if (is_sorted(nums.begin(), nums.end())) return true;
+
+				nums[i]=nums[i+1];
 				if (is_sorted(nums.begin(), nums.end())) return true;
 
 				return false;
