@@ -20,7 +20,7 @@ public:
             if ( n==1 ) return true;
 
             record.insert(n);
-            n = func(n);
+            n = squareSum(n);
 
             // a loop is created among the res of func
             if (record.find(n) != record.end())
@@ -28,7 +28,7 @@ public:
         }
     }
 private:
-    int func(int n){
+    int squareSum(int n){
         int res = 0;
         while (n!=0){
             res += pow(n%10, 2);
