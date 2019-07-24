@@ -23,12 +23,15 @@ class Solution{
 			}
 
 			backTrack(s, i+1, res);
-            
-            	char c = s[i];
-           	if (isalpha(c)){
-				s[i] = islower(c) ? toupper(c) : tolower(c);
+			if (isalpha(s[i])){
+				s[i] = islower(s[i]) ? toupper(s[i]) : tolower(s[i]);
 				backTrack(s, i+1, res);
 			}
+//            	char c = s[i];
+//         	if (isalpha(c)){
+//				s[i] = islower(c) ? toupper(c) : tolower(c);
+//				backTrack(s, i+1, res);
+//			}
 		
 		}
 
