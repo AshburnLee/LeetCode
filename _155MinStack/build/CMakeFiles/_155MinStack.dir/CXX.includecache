@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/media/junhui/DATA/LeetCode/_155MinStack/MinStack.h
+iostream
+-
+stack
+-
+
+/media/junhui/DATA/LeetCode/_155MinStack/main.cpp
+MinStack.h
+/media/junhui/DATA/LeetCode/_155MinStack/MinStack.h
+
