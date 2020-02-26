@@ -1,3 +1,0 @@
-/media/junhui/DATA/LeetCode/_155MinStack/build/CMakeFiles/edit_cache.dir
-/media/junhui/DATA/LeetCode/_155MinStack/build/CMakeFiles/rebuild_cache.dir
-/media/junhui/DATA/LeetCode/_155MinStack/build/CMakeFiles/_155MinStack.dir
